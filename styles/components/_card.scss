@@ -52,4 +52,43 @@
 			}
 		}
 	}
+
+	@include breakpointMobile(48rem) {
+		max-width: 11.75rem;
+
+		&__image {
+			background-position: 93% -0.15rem;
+			background-size: 3.593rem;
+		}
+
+		&__content {
+			gap: 1rem;
+
+			&-hours {
+				flex-direction: column;
+				align-items: start;
+				gap: 0.5rem;
+
+				strong {
+					@include apply-text-style(text-preset1);
+				}
+			}
+		}
+	}
+
+	@include breakpointMobile(80rem) {
+		min-width: 15.938rem;
+		max-height: 15.25rem;
+
+		&__image {
+			background-position: 90% -0.7rem;
+			background-size: 4.875rem;
+		}
+
+		&__content {
+			height: 100%;
+			padding: 2rem;
+			gap: 1.5rem;
+		}
+	}
 }

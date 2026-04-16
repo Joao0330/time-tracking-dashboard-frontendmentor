@@ -1,7 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
-/* @include breakpointMobile(991px) {
-    width: 100%;
-} */
 * {
   box-sizing: border-box;
   padding: 0;
@@ -125,6 +122,44 @@ main {
   letter-spacing: 0;
   color: hsl(236, 100%, 87%);
 }
+@media (min-width: 48rem) {
+  .card {
+    max-width: 11.75rem;
+  }
+  .card__image {
+    background-position: 93% -0.15rem;
+    background-size: 3.593rem;
+  }
+  .card__content {
+    gap: 1rem;
+  }
+  .card__content-hours {
+    flex-direction: column;
+    align-items: start;
+    gap: 0.5rem;
+  }
+  .card__content-hours strong {
+    font-size: 3.5rem;
+    font-weight: 300;
+    line-height: 4.125rem;
+    letter-spacing: 0;
+  }
+}
+@media (min-width: 80rem) {
+  .card {
+    min-width: 15.938rem;
+    max-height: 15.25rem;
+  }
+  .card__image {
+    background-position: 90% -0.7rem;
+    background-size: 4.875rem;
+  }
+  .card__content {
+    height: 100%;
+    padding: 2rem;
+    gap: 1.5rem;
+  }
+}
 
 .profileCard {
   display: flex;
@@ -190,11 +225,77 @@ main {
   text-align: center;
   cursor: pointer;
 }
+@media (min-width: 48rem) {
+  .profileCard__bottom {
+    padding: 1.5rem 8.406rem;
+  }
+  .profileCard__bottom ul {
+    justify-content: center;
+    gap: 0.5rem;
+  }
+}
+@media (min-width: 80rem) {
+  .profileCard {
+    max-width: 15.938rem;
+  }
+  .profileCard__top {
+    min-height: 22.125rem;
+  }
+  .profileCard__top figure {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.5rem;
+  }
+  .profileCard__top figure img {
+    max-width: 4.875rem;
+    max-height: 4.875rem;
+  }
+  .profileCard__top figure figcaption {
+    gap: 0;
+  }
+  .profileCard__top figure figcaption strong {
+    font-size: 2.5rem;
+    font-weight: 300;
+    line-height: 2.938rem;
+    letter-spacing: 0;
+  }
+  .profileCard__bottom {
+    padding: 0;
+    display: flex;
+    padding: 1.75rem 0 2rem 2rem;
+  }
+  .profileCard__bottom ul {
+    flex-direction: column;
+    gap: 1.313rem;
+  }
+  .profileCard__bottom ul li {
+    text-align: start;
+  }
+}
 
 .dashboard {
+  padding: 5.063rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.dashboard__wrapper {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   gap: 1.5rem;
-  padding: 5.063rem 0;
+}
+@media (min-width: 48rem) {
+  .dashboard__wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 80rem) {
+  .dashboard {
+    flex-direction: row;
+    gap: 2rem;
+  }
+  .dashboard__wrapper {
+    gap: 2rem;
+  }
 }

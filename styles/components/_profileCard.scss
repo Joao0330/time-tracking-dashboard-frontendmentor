@@ -64,4 +64,57 @@
 			}
 		}
 	}
+
+	@include breakpointMobile(48rem) {
+		&__bottom {
+			padding: 1.5rem 8.406rem;
+
+			ul {
+				justify-content: center;
+				gap: 0.5rem;
+			}
+		}
+	}
+
+	@include breakpointMobile(80rem) {
+		max-width: 15.938rem;
+
+		&__top {
+			min-height: 22.125rem;
+
+			figure {
+				flex-direction: column;
+				align-items: flex-start;
+				gap: 2.5rem;
+
+				img {
+					max-width: 4.875rem;
+					max-height: 4.875rem;
+				}
+
+				figcaption {
+					gap: 0;
+
+					strong {
+						@include apply-text-style(text-preset2);
+					}
+				}
+			}
+		}
+
+		&__bottom {
+			padding: 0;
+			display: flex;
+			padding: 1.75rem 0 2rem 2rem;
+
+			ul {
+				flex-direction: column;
+				gap: 1.313rem;
+
+				li {
+					text-align: start;
+				}
+			}
+		}
+	}
 }

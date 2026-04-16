@@ -1,9 +1,30 @@
 @use '../abstracts' as *;
 
 .dashboard {
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: auto;
-	gap: 1.5rem;
 	padding: 5.063rem 0;
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+
+	&__wrapper {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+		gap: 1.5rem;
+	}
+
+	@include breakpointMobile(48rem) {
+		&__wrapper {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+
+	@include breakpointMobile(80rem) {
+		flex-direction: row;
+		gap: 2rem;
+
+		&__wrapper {
+			gap: 2rem;
+		}
+	}
 }
