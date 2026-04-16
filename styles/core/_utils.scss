@@ -1,0 +1,28 @@
+@use '../abstracts' as *;
+
+.img-fluid {
+	width: 100%;
+	height: auto;
+}
+
+.sr-only {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0.063rem;
+	height: 0.063rem;
+	padding: 0;
+	margin: -0.063rem;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+	grid-area: none;
+}
+
+.container {
+	min-height: 100dvh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

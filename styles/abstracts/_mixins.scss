@@ -1,0 +1,18 @@
+@mixin breakpointMobile($break: 0) {
+	@media (min-width: $break) {
+		@content;
+	}
+}
+
+@mixin apply-text-style($type) {
+	$style: map-get($text-styles, $type);
+
+	font-size: map-get($style, font-size);
+	font-weight: map-get($style, font-weight);
+	line-height: map-get($style, line-height);
+	letter-spacing: map-get($style, letter-spacing);
+}
+
+/* @include breakpointMobile(991px) {
+    width: 100%;
+} */
