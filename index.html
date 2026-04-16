@@ -7,6 +7,8 @@
 		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
 		<link rel="stylesheet" href="./styles/main.css" />
 
+		<script defer src="./index.js"></script>
+
 		<title>Frontend Mentor | Time tracking dashboard</title>
 	</head>
 	<body>
@@ -29,133 +31,19 @@
 						<div class="profileCard__bottom">
 							<ul>
 								<li>
-									<button type="button">Daily</button>
+									<button type="button" id="daily">Daily</button>
 								</li>
 								<li>
-									<button type="button">Weekly</button>
+									<button type="button" id="weekly">Weekly</button>
 								</li>
 								<li>
-									<button type="button">Monthly</button>
+									<button type="button" id="monthly">Monthly</button>
 								</li>
 							</ul>
 						</div>
 					</article>
 
-					<div class="dashboard__wrapper">
-						<article class="card">
-							<div class="card__image" aria-hidden="true"></div>
-							<div class="card__content">
-								<div class="card__content-title">
-									<h3>Work</h3>
-									<button type="button">
-										<svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
-											<path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd" />
-										</svg>
-									</button>
-								</div>
-
-								<div class="card__content-hours">
-									<strong>32hrs</strong>
-									<p>Last Week - 36hrs</p>
-								</div>
-							</div>
-						</article>
-
-						<article class="card">
-							<div class="card__image" aria-hidden="true"></div>
-							<div class="card__content">
-								<div class="card__content-title">
-									<h3>Work</h3>
-									<button type="button">
-										<svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
-											<path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd" />
-										</svg>
-									</button>
-								</div>
-
-								<div class="card__content-hours">
-									<strong>32hrs</strong>
-									<p>Last Week - 36hrs</p>
-								</div>
-							</div>
-						</article>
-
-						<article class="card">
-							<div class="card__image" aria-hidden="true"></div>
-							<div class="card__content">
-								<div class="card__content-title">
-									<h3>Work</h3>
-									<button type="button">
-										<svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
-											<path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd" />
-										</svg>
-									</button>
-								</div>
-
-								<div class="card__content-hours">
-									<strong>32hrs</strong>
-									<p>Last Week - 36hrs</p>
-								</div>
-							</div>
-						</article>
-
-						<article class="card">
-							<div class="card__image" aria-hidden="true"></div>
-							<div class="card__content">
-								<div class="card__content-title">
-									<h3>Work</h3>
-									<button type="button">
-										<svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
-											<path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd" />
-										</svg>
-									</button>
-								</div>
-
-								<div class="card__content-hours">
-									<strong>32hrs</strong>
-									<p>Last Week - 36hrs</p>
-								</div>
-							</div>
-						</article>
-
-						<article class="card">
-							<div class="card__image" aria-hidden="true"></div>
-							<div class="card__content">
-								<div class="card__content-title">
-									<h3>Work</h3>
-									<button type="button">
-										<svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
-											<path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd" />
-										</svg>
-									</button>
-								</div>
-
-								<div class="card__content-hours">
-									<strong>32hrs</strong>
-									<p>Last Week - 36hrs</p>
-								</div>
-							</div>
-						</article>
-
-						<article class="card">
-							<div class="card__image" aria-hidden="true"></div>
-							<div class="card__content">
-								<div class="card__content-title">
-									<h3>Work</h3>
-									<button type="button">
-										<svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
-											<path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd" />
-										</svg>
-									</button>
-								</div>
-
-								<div class="card__content-hours">
-									<strong>32hrs</strong>
-									<p>Last Week - 36hrs</p>
-								</div>
-							</div>
-						</article>
-					</div>
+					<div class="dashboard__wrapper"></div>
 				</section>
 			</div>
 		</main>

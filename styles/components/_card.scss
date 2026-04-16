@@ -2,13 +2,42 @@
 
 .card {
 	border-radius: 0.938rem;
-	background: $color-orange-300;
 	overflow: hidden;
 
 	&__image {
-		background: url('../images/icon-work.svg') no-repeat;
 		background-position: 93% -0.7rem;
+		background-repeat: no-repeat;
 		padding-top: 2.375rem;
+	}
+
+	&.work .card__image {
+		background-color: $color-orange-300;
+		background-image: url('../images/icon-work.svg');
+	}
+
+	&.play .card__image {
+		background-color: $color-blue-300;
+		background-image: url('../images/icon-play.svg');
+	}
+
+	&.study .card__image {
+		background-color: $color-pink-400;
+		background-image: url('../images/icon-study.svg');
+	}
+
+	&.exercise .card__image {
+		background-color: $color-green-400;
+		background-image: url('../images/icon-exercise.svg');
+	}
+
+	&.social .card__image {
+		background-color: $color-purple-700;
+		background-image: url('../images/icon-social.svg');
+	}
+
+	&.selfCare .card__image {
+		background-color: $color-yellow-300;
+		background-image: url('../images/icon-self-care.svg');
 	}
 
 	&__content {
