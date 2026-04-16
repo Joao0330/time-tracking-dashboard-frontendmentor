@@ -1,0 +1,67 @@
+@use '../abstracts' as *;
+
+.profileCard {
+	display: flex;
+	flex-direction: column;
+	border-radius: 0.938rem;
+	background: $color-navy-900;
+	overflow: hidden;
+
+	&__top {
+		padding: 2rem;
+		background: $color-purple-600;
+		border-radius: 0 0 0.938rem 0.938rem;
+
+		figure {
+			display: flex;
+			align-items: center;
+			gap: 1.5rem;
+
+			img {
+				max-height: 4rem;
+				max-width: 4rem;
+				border-radius: 50%;
+				border: 0.188rem solid white;
+			}
+
+			figcaption {
+				display: flex;
+				flex-direction: column;
+				gap: 0.5rem;
+
+				span {
+					@include apply-text-style(text-preset6);
+					color: $color-navy-200;
+				}
+
+				strong {
+					@include apply-text-style(text-preset4);
+					color: white;
+				}
+			}
+		}
+	}
+
+	&__bottom {
+		padding: 1.5rem 0;
+
+		ul {
+			display: flex;
+			justify-content: space-around;
+
+			li {
+				text-align: center;
+				width: 100%;
+
+				button {
+					background: none;
+					border: none;
+					@include apply-text-style(text-preset5-regular);
+					color: $color-purple-500;
+					text-align: center;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}

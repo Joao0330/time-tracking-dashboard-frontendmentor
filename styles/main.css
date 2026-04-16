@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+/* @include breakpointMobile(991px) {
+    width: 100%;
+} */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-size: 1.125rem;
+  font-family: "Rubik", sans-serif;
+  background: hsl(226, 43%, 10%);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  display: block;
+}
+
+button {
+  font-family: inherit;
+}
+
+main {
+  display: block;
+}
+
+.img-fluid {
+  width: 100%;
+  height: auto;
+}
+
+.sr-only {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0.063rem;
+  height: 0.063rem;
+  padding: 0;
+  margin: -0.063rem;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+  grid-area: none;
+}
+
+.container {
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  border-radius: 0.938rem;
+  background: hsl(15, 100%, 70%);
+  overflow: hidden;
+}
+.card__image {
+  background: url("../images/icon-work.svg") no-repeat;
+  background-position: 93% -0.7rem;
+  padding-top: 2.375rem;
+}
+.card__content {
+  background: hsl(235, 46%, 20%);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-radius: 0.938rem 0.938rem 0 0;
+}
+.card__content-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card__content-title h3 {
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.313rem;
+  letter-spacing: 0;
+  color: white;
+}
+.card__content-title button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.card__content-hours {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card__content-hours strong {
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 2.375rem;
+  letter-spacing: 0;
+  color: white;
+}
+.card__content-hours p {
+  font-size: 0.938rem;
+  font-weight: 400;
+  line-height: 1.125rem;
+  letter-spacing: 0;
+  color: hsl(236, 100%, 87%);
+}
+
+.profileCard {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.938rem;
+  background: hsl(235, 46%, 20%);
+  overflow: hidden;
+}
+.profileCard__top {
+  padding: 2rem;
+  background: hsl(246, 80%, 60%);
+  border-radius: 0 0 0.938rem 0.938rem;
+}
+.profileCard__top figure {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.profileCard__top figure img {
+  max-height: 4rem;
+  max-width: 4rem;
+  border-radius: 50%;
+  border: 0.188rem solid white;
+}
+.profileCard__top figure figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.profileCard__top figure figcaption span {
+  font-size: 0.938rem;
+  font-weight: 400;
+  line-height: 1.125rem;
+  letter-spacing: 0;
+  color: hsl(236, 100%, 87%);
+}
+.profileCard__top figure figcaption strong {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.75rem;
+  letter-spacing: 0;
+  color: white;
+}
+.profileCard__bottom {
+  padding: 1.5rem 0;
+}
+.profileCard__bottom ul {
+  display: flex;
+  justify-content: space-around;
+}
+.profileCard__bottom ul li {
+  text-align: center;
+  width: 100%;
+}
+.profileCard__bottom ul li button {
+  background: none;
+  border: none;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.313rem;
+  letter-spacing: 0;
+  color: hsl(235, 45%, 61%);
+  text-align: center;
+  cursor: pointer;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 1.5rem;
+  padding: 5.063rem 0;
+}

@@ -1,1 +1,55 @@
 @use '../abstracts' as *;
+
+.card {
+	border-radius: 0.938rem;
+	background: $color-orange-300;
+	overflow: hidden;
+
+	&__image {
+		background: url('../images/icon-work.svg') no-repeat;
+		background-position: 93% -0.7rem;
+		padding-top: 2.375rem;
+	}
+
+	&__content {
+		background: $color-navy-900;
+		padding: 1.5rem;
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		border-radius: 0.938rem 0.938rem 0 0;
+
+		&-title {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			h3 {
+				@include apply-text-style(text-preset5-medium);
+				color: white;
+			}
+
+			button {
+				background: none;
+				border: none;
+				cursor: pointer;
+			}
+		}
+
+		&-hours {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			strong {
+				@include apply-text-style(text-preset3);
+				color: white;
+			}
+
+			p {
+				@include apply-text-style(text-preset6);
+				color: $color-navy-200;
+			}
+		}
+	}
+}

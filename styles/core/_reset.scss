@@ -1,3 +1,5 @@
+@use '../abstracts' as *;
+
 * {
 	box-sizing: border-box;
 	padding: 0;
@@ -16,6 +18,7 @@ body {
 	-webkit-font-smoothing: antialiased;
 	font-size: 1.125rem;
 	font-family: 'Rubik', sans-serif;
+	background: $color-navy-950;
 }
 
 a {
