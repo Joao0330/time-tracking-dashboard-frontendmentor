@@ -55,7 +55,7 @@ const displayCards = async (type = 'weekly') => {
 			const cardClass = classMap[card.title.toLowerCase()];
 
 			cardHtml += `
-                <article class="card ${cardClass}">
+                <div class="card ${cardClass}">
 						<div class="card__image" aria-hidden="true"></div>
 							<div class="card__content">
 								<div class="card__content-title">
@@ -73,7 +73,7 @@ const displayCards = async (type = 'weekly') => {
 									<p>${previousText} - ${currentTimeframe.previous}hrs</p>
 								</div>
 						    </div>
-				</article>
+				</div>
             `;
 
 			dashboardWrapper.innerHTML = cardHtml;
