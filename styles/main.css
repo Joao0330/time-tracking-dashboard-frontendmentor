@@ -77,28 +77,40 @@ main {
   background-repeat: no-repeat;
   padding-top: 2.375rem;
 }
-.card.work .card__image {
+.card.work {
   background-color: hsl(15, 100%, 70%);
+}
+.card.work .card__image {
   background-image: url("../images/icon-work.svg");
 }
-.card.play .card__image {
+.card.play {
   background-color: hsl(195, 74%, 62%);
+}
+.card.play .card__image {
   background-image: url("../images/icon-play.svg");
 }
-.card.study .card__image {
+.card.study {
   background-color: hsl(348, 100%, 68%);
+}
+.card.study .card__image {
   background-image: url("../images/icon-study.svg");
 }
-.card.exercise .card__image {
+.card.exercise {
   background-color: hsl(145, 58%, 55%);
+}
+.card.exercise .card__image {
   background-image: url("../images/icon-exercise.svg");
 }
-.card.social .card__image {
+.card.social {
   background-color: hsl(264, 64%, 52%);
+}
+.card.social .card__image {
   background-image: url("../images/icon-social.svg");
 }
-.card.selfCare .card__image {
+.card.selfCare {
   background-color: hsl(43, 84%, 65%);
+}
+.card.selfCare .card__image {
   background-image: url("../images/icon-self-care.svg");
 }
 .card__content {
@@ -147,11 +159,21 @@ main {
 }
 @media (min-width: 48rem) {
   .card {
-    max-width: 11.75rem;
+    /* max-width: 11.75rem; */
   }
   .card__image {
     background-position: 93% -0.15rem;
     background-size: 3.593rem;
+  }
+  .card.exercise .card__image {
+    background-position: 90% -0.1rem;
+  }
+  .card.social .card__image {
+    background-position: 90% -0.5rem;
+  }
+  .card.selfCare .card__image {
+    background-size: 3.313rem 3rem;
+    background-position: 90% -0.2rem;
   }
   .card__content {
     gap: 1rem;
@@ -174,13 +196,30 @@ main {
     max-height: 15.25rem;
   }
   .card__image {
+    padding-top: 2.813rem;
     background-position: 90% -0.7rem;
     background-size: 4.875rem;
+  }
+  .card.exercise .card__image {
+    background-position: 90% -0.1rem;
+  }
+  .card.social .card__image {
+    background-position: 90% -1.3rem;
+  }
+  .card.selfCare .card__image {
+    background-size: 4.5rem 4.125rem;
+    background-position: 90% -0.7rem;
   }
   .card__content {
     height: 100%;
     padding: 2rem;
     gap: 1.5rem;
+  }
+  .card__content:hover {
+    background: hsl(235, 41%, 34%);
+  }
+  .card__content-title button:hover path {
+    fill: white;
   }
 }
 
@@ -294,6 +333,9 @@ main {
   .profileCard__bottom ul li {
     text-align: start;
   }
+  .profileCard__bottom ul li button:hover {
+    color: white;
+  }
 }
 
 .dashboard {
@@ -321,4 +363,15 @@ main {
   .dashboard__wrapper {
     gap: 2rem;
   }
+}
+
+footer {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  text-align: center;
+  color: white;
+}
+footer a {
+  color: hsl(235, 45%, 61%);
 }

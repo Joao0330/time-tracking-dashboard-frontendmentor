@@ -1,6 +1,8 @@
 const dashboardWrapper = document.querySelector('.dashboard__wrapper');
 const filterBtns = document.querySelectorAll('li button');
 
+let cachedData = [];
+
 const fetchCards = async () => {
 	try {
 		const response = await fetch('./data.json');
@@ -19,51 +21,40 @@ const fetchCards = async () => {
 
 const displayCards = async (type = 'weekly') => {
 	try {
-		const data = await fetchCards();
-		let currentTimeframe;
-		let previousText;
-		let cardClass;
+		if (cachedData.length === 0) {
+			cachedData = await fetchCards();
+		}
 
-		dashboardWrapper.innerHTML = '';
+		const data = cachedData;
+
+		let cardHtml = '';
+
+		filterBtns.forEach(btn => {
+			btn.style.color = '';
+			btn.id === type ? (btn.style.color = 'white') : '';
+		});
 
 		data.forEach(card => {
-			switch (type) {
-				case 'daily':
-					currentTimeframe = card.timeframes.daily;
-					previousText = 'Yesterday';
-					break;
-				case 'weekly':
-					currentTimeframe = card.timeframes.weekly;
-					previousText = 'Last week';
-					break;
-				case 'monthly':
-					currentTimeframe = card.timeframes.monthly;
-					previousText = 'Last Month';
-					break;
-			}
+			const timeframeMap = {
+				daily: { label: 'Yesterday' },
+				weekly: { label: 'Last week' },
+				monthly: { label: 'Last Month' },
+			};
 
-			switch (card.title) {
-				case 'Work':
-					cardClass = 'work';
-					break;
-				case 'Play':
-					cardClass = 'play';
-					break;
-				case 'Study':
-					cardClass = 'study';
-					break;
-				case 'Exercise':
-					cardClass = 'exercise';
-					break;
-				case 'Social':
-					cardClass = 'social';
-					break;
-				case 'Self Care':
-					cardClass = 'selfCare';
-					break;
-			}
+			const classMap = {
+				work: 'work',
+				play: 'play',
+				study: 'study',
+				exercise: 'exercise',
+				social: 'social',
+				'self care': 'selfCare',
+			};
 
-			dashboardWrapper.innerHTML += `
+			const currentTimeframe = card.timeframes[type];
+			const previousText = timeframeMap[type].label;
+			const cardClass = classMap[card.title.toLowerCase()];
+
+			cardHtml += `
                 <article class="card ${cardClass}">
 						<div class="card__image" aria-hidden="true"></div>
 							<div class="card__content">
@@ -83,6 +74,8 @@ const displayCards = async (type = 'weekly') => {
 						    </div>
 				</article>
             `;
+
+			dashboardWrapper.innerHTML = cardHtml;
 		});
 	} catch (error) {
 		console.error(error);

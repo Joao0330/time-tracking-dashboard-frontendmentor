@@ -10,34 +10,52 @@
 		padding-top: 2.375rem;
 	}
 
-	&.work .card__image {
+	&.work {
 		background-color: $color-orange-300;
-		background-image: url('../images/icon-work.svg');
+
+		.card__image {
+			background-image: url('../images/icon-work.svg');
+		}
 	}
 
-	&.play .card__image {
+	&.play {
 		background-color: $color-blue-300;
-		background-image: url('../images/icon-play.svg');
+
+		.card__image {
+			background-image: url('../images/icon-play.svg');
+		}
 	}
 
-	&.study .card__image {
+	&.study {
 		background-color: $color-pink-400;
-		background-image: url('../images/icon-study.svg');
+
+		.card__image {
+			background-image: url('../images/icon-study.svg');
+		}
 	}
 
-	&.exercise .card__image {
+	&.exercise {
 		background-color: $color-green-400;
-		background-image: url('../images/icon-exercise.svg');
+
+		.card__image {
+			background-image: url('../images/icon-exercise.svg');
+		}
 	}
 
-	&.social .card__image {
+	&.social {
 		background-color: $color-purple-700;
-		background-image: url('../images/icon-social.svg');
+
+		.card__image {
+			background-image: url('../images/icon-social.svg');
+		}
 	}
 
-	&.selfCare .card__image {
+	&.selfCare {
 		background-color: $color-yellow-300;
-		background-image: url('../images/icon-self-care.svg');
+
+		.card__image {
+			background-image: url('../images/icon-self-care.svg');
+		}
 	}
 
 	&__content {
@@ -83,11 +101,30 @@
 	}
 
 	@include breakpointMobile(48rem) {
-		max-width: 11.75rem;
+		/* max-width: 11.75rem; */
 
 		&__image {
 			background-position: 93% -0.15rem;
 			background-size: 3.593rem;
+		}
+
+		&.exercise {
+			.card__image {
+				background-position: 90% -0.1rem;
+			}
+		}
+
+		&.social {
+			.card__image {
+				background-position: 90% -0.5rem;
+			}
+		}
+
+		&.selfCare {
+			.card__image {
+				background-size: 3.313rem 3rem;
+				background-position: 90% -0.2rem;
+			}
 		}
 
 		&__content {
@@ -110,14 +147,46 @@
 		max-height: 15.25rem;
 
 		&__image {
+			padding-top: 2.813rem;
 			background-position: 90% -0.7rem;
 			background-size: 4.875rem;
+		}
+
+		&.exercise {
+			.card__image {
+				background-position: 90% -0.1rem;
+			}
+		}
+
+		&.social {
+			.card__image {
+				background-position: 90% -1.3rem;
+			}
+		}
+
+		&.selfCare {
+			.card__image {
+				background-size: 4.5rem 4.125rem;
+				background-position: 90% -0.7rem;
+			}
 		}
 
 		&__content {
 			height: 100%;
 			padding: 2rem;
 			gap: 1.5rem;
+
+			&:hover {
+				background: $color-navy-800;
+			}
+
+			&-title button {
+				&:hover {
+					path {
+						fill: white;
+					}
+				}
+			}
 		}
 	}
 }
