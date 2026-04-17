@@ -30,8 +30,8 @@ const displayCards = async (type = 'weekly') => {
 		let cardHtml = '';
 
 		filterBtns.forEach(btn => {
-			btn.style.color = '';
-			btn.id === type ? (btn.style.color = 'white') : '';
+			btn.classList.remove('active');
+			btn.id === type ? btn.classList.add('active') : '';
 		});
 
 		data.forEach(card => {
@@ -59,9 +59,10 @@ const displayCards = async (type = 'weekly') => {
 						<div class="card__image" aria-hidden="true"></div>
 							<div class="card__content">
 								<div class="card__content-title">
-									<h3>${card.title}</h3>
+									<h2>${card.title}</h2>
 									<button type="button">
-										<svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+										<span class="sr-only">Options</span>
+										<svg width="21" height="5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
 											<path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd" />
 										</svg>
 									</button>
@@ -89,6 +90,8 @@ window.addEventListener('load', () => {
 
 filterBtns.forEach(btn => {
 	btn.addEventListener('click', () => {
+		filterBtns.forEach(b => b.setAttribute('aria-pressed', 'false'));
+		btn.setAttribute('aria-pressed', 'true');
 		const timeframe = btn.id;
 		displayCards(timeframe);
 	});

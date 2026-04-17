@@ -126,7 +126,7 @@ main {
   align-items: center;
   justify-content: space-between;
 }
-.card__content-title h3 {
+.card__content-title h2 {
   font-size: 1.125rem;
   font-weight: 500;
   line-height: 1.313rem;
@@ -286,6 +286,9 @@ main {
   color: hsl(235, 45%, 61%);
   text-align: center;
   cursor: pointer;
+}
+.profileCard__bottom ul li button.active {
+  color: white;
 }
 @media (min-width: 48rem) {
   .profileCard__bottom {
